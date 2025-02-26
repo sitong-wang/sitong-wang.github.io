@@ -9,6 +9,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      a {
+        color: #4A90E2;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Mobile responsiveness */
+      @media only screen and (max-width: 768px) {
+        /* Adjust main content table */
+        table {
+          width: 100% !important;
+          padding: 0 20px !important;  /* Equal padding left and right */
+          box-sizing: border-box !important;
+        }
+        
+        /* Make profile section stack on mobile */
+        td {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 10px 0 !important;  /* Remove horizontal padding from cells */
+          text-align: left !important;
+        }
+        
+        /* Publications header specific padding */
+        h2 {
+          padding: 0 !important;
+          margin: 20px 0 !important;
+        }
+        
+        /* Center profile image */
+        td img {
+          margin: 0 !important;
+          display: block !important;
+          max-width: 250px !important;
+        }
+        
+        /* Left align name and links */
+        .name {
+          text-align: left !important;
+        }
+        
+        /* Force left alignment for contact links */
+        p[style*="text-align:center"] {
+          text-align: left !important;
+        }
+        
+        /* Adjust publication entries */
+        .papertitle {
+          font-size: 16px !important;
+          line-height: 1.4 !important;
+        }
+        
+        /* Make paper links wrap better */
+        p {
+          word-wrap: break-word !important;
+        }
+        
+        /* Make teaser images full width */
+        td > img {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 100% !important;
+          object-fit: contain !important;
+        }
+        
+        /* Reorder profile section */
+        tr:first-of-type td:first-of-type {
+          order: 2 !important;
+        }
+        
+        tr:first-of-type td:last-of-type {
+          order: 1 !important;
+        }
+        
+        /* Adjust headshot style */
+        td a img.hoverZoomLink {
+          width: 200px !important;
+          height: 200px !important;
+          max-width: 200px !important;
+          margin: 10px auto 0 auto !important;  /* Reduced bottom margin to 0 */
+          display: block !important;
+          object-fit: cover !important;
+        }
+        
+        /* Tighten spacing in profile section */
+        tr:first-of-type td {
+          padding: 5px 0 !important;  /* Reduced padding */
+        }
+        
+        /* Ensure flex display for reordering */
+        tr:first-of-type {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+        
+        /* Reorder publication entries - image first */
+        table:has(.papertitle) tr {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+        
+        /* Put image td first */
+        table:has(.papertitle) tr td:first-of-type {
+          order: 1 !important;
+          width: 100% !important;
+          padding: 10px 0 5px 0 !important;  /* Reduced padding between image and text */
+        }
+        
+        /* Put text td second */
+        table:has(.papertitle) tr td:last-of-type {
+          order: 2 !important;
+          width: 100% !important;
+          padding: 5px 0 20px 0 !important;  /* Added more padding at bottom for separation between papers */
+        }
+      }
+    </style>
     
   </head>
 
@@ -362,7 +482,7 @@
 
                 <td width="70%" valign="middle" style="line-height:150%">
                   <!--Title-->
-                  <span class="papertitle">Copying style, Extracting value: Illustrators’ Perception of AI Style Transfer and
+                  <span class="papertitle">Copying style, Extracting value: Illustrators' Perception of AI Style Transfer and
                     its Impact on Creative Labor</span>
                   <br>
 
