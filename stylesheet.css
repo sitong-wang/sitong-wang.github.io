@@ -78,7 +78,7 @@ body {
 }
 
 a {
-  color: #5B9BD5;
+  color: #4A9EC5;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -115,7 +115,7 @@ main {
 }
 
 .topnav a:hover {
-  color: #5B9BD5;
+  color: #4A9EC5;
   text-decoration: none;
 }
 
@@ -138,7 +138,7 @@ h2::after {
   display: block;
   width: 120%;
   height: 4px;
-  background: linear-gradient(90deg, #5B9BD5 0%, #5B9BD5 50%, transparent 100%);
+  background: linear-gradient(90deg, #4A9EC5 0%, #4A9EC5 50%, transparent 100%);
   margin-top: 8px;
   border-radius: 3px;
   opacity: 0.6;
@@ -184,7 +184,7 @@ h2::after {
 .pronouns {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  color: #aaa;
+  color: #777;
   margin: 6px 0 0 0;
 }
 
@@ -212,12 +212,12 @@ h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #5B9BD5;
+  color: #4A9EC5;
   transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: #5B9BD5;
+  color: #4A9EC5;
   text-decoration: none;
 }
 
@@ -376,7 +376,7 @@ h2::after {
 
 .paper-links a {
   font-size: 14px;
-  color: #5B9BD5;
+  color: #4A9EC5;
 }
 
 .pub-gap {
