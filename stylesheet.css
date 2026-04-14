@@ -324,8 +324,16 @@ h2 {
   font-size: 14px;
 }
 
-.publications.filter-selected .paper:not(.first-author) {
+.publications.filter-multimodal .paper:not(.cat-multimodal),
+.publications.filter-agentic .paper:not(.cat-agentic),
+.publications.filter-society .paper:not(.cat-society) {
   display: none;
+}
+
+.publications.filter-multimodal .paper.first-author.cat-multimodal,
+.publications.filter-agentic .paper.first-author.cat-agentic,
+.publications.filter-society .paper.first-author.cat-society {
+  order: -1;
 }
 
 .pub-section-label {

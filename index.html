@@ -46,13 +46,17 @@
           <div class="research-filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <span class="filter-sep">/</span>
-            <button class="filter-btn" data-filter="selected">Selected</button>
+            <button class="filter-btn" data-filter="multimodal">Multimodal Creativity</button>
+            <span class="filter-sep">/</span>
+            <button class="filter-btn" data-filter="agentic">Agentic Productivity</button>
+            <span class="filter-sep">/</span>
+            <button class="filter-btn" data-filter="society">Societal Impact</button>
           </div>
         </div>
 
         <div class="papers">
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-multimodal">
             <div class="paper-img"><img src="images/video.jpg" alt="Rewriting Video"></div>
             <div class="paper-text">
               <span class="venue">IUI 2026 ✨Best Paper Candidate✨</span>
@@ -65,7 +69,7 @@
             </div>
           </article>
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-agentic">
             <div class="paper-img"><img src="images/schemex2.png" alt="Schemex"></div>
             <div class="paper-text">
               <span class="venue">Under submission</span>
@@ -79,7 +83,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-agentic">
             <div class="paper-img"><img src="images/zoro.jpg" alt="Zoro"></div>
             <div class="paper-text">
               <span class="venue">Under submission</span>
@@ -88,7 +92,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-agentic">
             <div class="paper-img"><img src="images/agents.png" alt="DoubleAgents"></div>
             <div class="paper-text">
               <span class="venue">Under submission</span>
@@ -101,7 +105,7 @@
             </div>
           </article>
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-agentic">
             <div class="paper-img"><img src="images/jumpstarter.png" alt="JumpStarter"></div>
             <div class="paper-text">
               <span class="venue">Under submission</span>
@@ -126,7 +130,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-society">
             <div class="paper-img"><img src="images/human_creativity.jpg" alt="Human Creativity"></div>
             <div class="paper-text">
               <span class="venue">HICSS 2026</span>
@@ -151,7 +155,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-agentic">
             <div class="paper-img"><img src="images/dynex.png" alt="DynEx"></div>
             <div class="paper-text">
               <span class="venue">CHI 2025 ✨Best Paper Honorable Mention Award✨</span>
@@ -165,7 +169,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-society">
             <div class="paper-img"><img src="images/style.png" alt="AI Style Transfer"></div>
             <div class="paper-text">
               <span class="venue">CHI 2025</span>
@@ -179,7 +183,7 @@
             </div>
           </article>
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-multimodal">
             <div class="paper-img"><img src="images/podreels.png" alt="PodReels"></div>
             <div class="paper-text">
               <span class="venue">DIS 2024</span>
@@ -207,7 +211,7 @@
             </div>
           </article>
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-multimodal">
             <div class="paper-img"><img src="images/reelframer.png" alt="ReelFramer"></div>
             <div class="paper-text">
               <span class="venue">CHI 2024</span>
@@ -221,7 +225,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-society">
             <div class="paper-img"><img src="images/dsiiwa.png" alt="Writing Assistants"></div>
             <div class="paper-text">
               <span class="venue">CHI 2024</span>
@@ -248,7 +252,7 @@
             </div>
           </article>
 
-          <article class="paper first-author">
+          <article class="paper first-author cat-multimodal">
             <div class="paper-img"><img src="images/popblends.png" alt="PopBlends"></div>
             <div class="paper-text">
               <span class="venue">CHI 2023</span>
@@ -288,7 +292,7 @@
             </div>
           </article>
 
-          <article class="paper">
+          <article class="paper cat-multimodal">
             <div class="paper-img"><img src="images/metamap.png" alt="MetaMap"></div>
             <div class="paper-text">
               <span class="venue">CHI 2021</span>
@@ -376,16 +380,17 @@
         if (e.key === 'Escape') lightbox.classList.remove('active');
       });
 
-      // Research filter (All / Selected)
+      // Research filter (All / Multimodal / Agentic / Society)
       const publicationsSection = document.querySelector('.publications');
+      const filterClasses = ['filter-multimodal', 'filter-agentic', 'filter-society'];
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          if (btn.dataset.filter === 'selected') {
-            publicationsSection.classList.add('filter-selected');
-          } else {
-            publicationsSection.classList.remove('filter-selected');
+          filterClasses.forEach(c => publicationsSection.classList.remove(c));
+          const f = btn.dataset.filter;
+          if (f !== 'all') {
+            publicationsSection.classList.add('filter-' + f);
           }
         });
       });
