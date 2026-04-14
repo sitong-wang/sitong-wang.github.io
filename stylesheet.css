@@ -591,8 +591,22 @@ h2 {
   }
 
   .research-header {
-    gap: 10px !important;
-    margin-bottom: 12px !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .research-filters {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  .filter-btn {
+    font-size: 12px !important;
+  }
+
+  .filter-sep {
+    font-size: 12px !important;
   }
 
   /* Publications */
