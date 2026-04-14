@@ -537,86 +537,86 @@ h2 {
 /* ---- Mobile ---- */
 @media only screen and (max-width: 768px) {
   main {
-    padding: 16px;
+    padding: 16px !important;
   }
 
   /* Profile */
   .profile {
-    padding: 24px 0 12px 0;
+    padding: 20px 0 12px 0 !important;
   }
 
-  .profile-photo {
-    float: none;
-    display: block;
-    width: 140px;
-    margin: 0 0 16px 0;
+  img.profile-photo {
+    float: none !important;
+    display: block !important;
+    width: 160px !important;
+    max-width: 160px !important;
+    height: auto !important;
+    aspect-ratio: 1 !important;
+    margin: 0 0 18px 0 !important;
   }
 
   .name {
-    font-size: 28px;
-    margin-bottom: 16px;
+    font-size: 28px !important;
+    margin: 0 0 16px 0 !important;
   }
 
   .profile > p {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .social-links {
-    justify-content: flex-start;
-    gap: 16px;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    margin-top: 16px !important;
   }
 
   /* Research heading */
   h2 {
-    font-size: 20px;
-    margin: 0 0 12px 0;
+    font-size: 20px !important;
+    margin: 0 0 12px 0 !important;
   }
 
   .research-header {
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 10px !important;
+    margin-bottom: 12px !important;
   }
 
   /* Publications */
   .publications {
-    margin-top: 20px;
-  }
-
-  .papers {
-    gap: 0;
+    margin-top: 24px !important;
   }
 
   /* Paper entries */
   .paper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 20px 0;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding: 20px 0 !important;
   }
 
   .paper-img {
-    width: 100%;
+    width: 100% !important;
   }
 
   .paper-text {
-    gap: 6px;
+    gap: 6px !important;
   }
 
   .papertitle {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   /* Mentoring */
   .mentoring {
-    margin-top: 24px;
+    margin-top: 24px !important;
   }
 
   .mentees li {
-    padding: 8px 0;
+    padding: 8px 0 !important;
   }
 
   /* Footer */
   .footer {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 }
