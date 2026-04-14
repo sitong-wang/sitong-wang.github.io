@@ -182,6 +182,12 @@ h2 {
   line-height: 1.65;
 }
 
+.profile > p.news-banner {
+  border-left: 3px solid #4A9EC5;
+  padding-left: 14px;
+  margin-top: 14px;
+}
+
 /* Social icons */
 .social-links {
   display: flex;
